@@ -1,0 +1,9 @@
+#!/bin/bash
+# vim: set filetype=sh :
+
+alias flush='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
+
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+    alias "$method"="lwp-request -m \"$method\""
+done
+unset method
