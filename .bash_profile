@@ -4,3 +4,5 @@ for file in ~/.{bash_prompt,aliases,exports}; do
     fi
 done;
 unset file;
+
+source /usr/local/etc/profile.d/z.sh
