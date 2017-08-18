@@ -26,6 +26,7 @@ set incsearch
 set hlsearch
 
 set ruler                       " Show the cursor position all the time
+set tabstop=4
 
 set showmatch
 
@@ -83,3 +84,14 @@ let g:remoteSession = ($STY == "")
 if !g:remoteSession
     let g:airline_powerline_fonts=1
 endif
+
+" Strip trailing whitespace (,ss)
+function! StripWhitespace()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    :%s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfunction
+noremap <leader>ss :call StripWhitespace()<CR>
+
