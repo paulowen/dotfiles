@@ -8,3 +8,6 @@ dotfiles:
 		f=$$(basename $$file); \
 		ln -sfn $$file $(HOME)/$$f; \
 	done;
+	# conveniently set brew.sh as executable
+	chmod +x $(CURDIR)/brew.sh;
+

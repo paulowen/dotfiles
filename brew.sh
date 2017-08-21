@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # Install command-line tools using Homebrew.
-
-# Required taps..
-# - brew tap caskroom/cask
-# - brew tap caskroom/fonts
-# - brew tap homebrew/core
+# Add tab completion for many Bash commands
+if ! which brew &> /dev/null; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+    brew tap caskroom/cask;
+    brew tap caskroom/fonts;
+fi;
 
 # Make sure we’re using the latest Homebrew.
 brew update
-
 # Upgrade any already-installed formulae.
 brew upgrade
 
@@ -86,11 +86,15 @@ brew install zopfli
 
 # Install Caskroom applications.
 brew cask install adium
+brew cask install cheatsheet
 brew cask install dash
 brew cask install duet
 brew cask install firefox
 brew cask install flux
+brew cask install gas-mask
 brew cask install grammarly
+brew cask install kap
+brew cask install licecap
 brew cask install lingon-x
 brew cask install omnigraffle
 brew cask install omnioutliner
