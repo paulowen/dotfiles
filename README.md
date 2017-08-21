@@ -3,6 +3,6 @@
 To install:
 
 ```
-sh ./brew.sh
+./brew.sh
 make
 ```
