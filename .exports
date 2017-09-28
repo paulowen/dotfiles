@@ -1,3 +1,4 @@
 export PATH=~/Library/Python/2.7/bin:/usr/local/sbin:$PATH
 export MANPATH=~/Library/Python/2.7/share/man:$MANPATH
 export EDITOR='vim'
+export UNISONLOCALHOSTNAME=unison.local
